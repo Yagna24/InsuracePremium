@@ -15,12 +15,7 @@ if __name__ ==  "__main__" :
     print('df.columns',df.columns)
     df.reset_index(drop=True, inplace = True )
     
-<<<<<<< HEAD
     json_record = list(json.loads(df.T.to_json()).values())
     
     client[DATABASE_NAME][COLLECTION_NAME].insert_many(json_record)
-=======
-    ### converting csv to json format to store into mongodb
-    json_record = list(json.load(df.T.to_json()).values())
->>>>>>> 61c0ff0d2a79c0b36dc35a1b1a1e9e4b11bd787d
     
