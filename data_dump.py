@@ -14,5 +14,6 @@ if __name__ ==  "__main__" :
 
     df.reset_index(drop=True, inplace = True )
     
+    ### converting csv to json format to store into mongodb
     json_record = list(json.load(df.T.to_json()).values())
     
