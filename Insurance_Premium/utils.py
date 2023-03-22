@@ -4,11 +4,11 @@ from Insurance_Premium.logger import logging
 from Insurance_Premium.exception import InsuranceException
 import os,sys
 import yaml
-import dill
+# import dill
 import numpy as np
 
 
-def get_collection_as_dataframe(database_name:str, collection_name:str):
+def get_collection_as_dataframe(database_name:str, collection_name:str)->pd.DataFrame:
     try : 
         df = pd.DataFrame(list(mongo_client[database_name][collection_name].find()))
         logging.info(f"Found columns: {df.columns}")
