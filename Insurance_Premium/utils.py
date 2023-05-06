@@ -1,10 +1,13 @@
-from Insurance_Premium.config import mongo_client
+# from Insurance_Premium.config import mongo_client
+from config import mongo_client
 import pandas as pd 
-from Insurance_Premium.logger import logging
-from Insurance_Premium.exception import InsuranceException
+# from Insurance_Premium.logger import logging
+from logger import logging
+# from Insurance_Premium.exception import InsuranceException
+from exception import InsuranceException
 import os,sys
 import yaml
-# import dill
+import dill
 import numpy as np
 
 
